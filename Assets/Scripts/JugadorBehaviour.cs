@@ -14,6 +14,14 @@ public class MovimientoJugador : MonoBehaviour
     public GameObject prefabHielo; // Asignar el prefab desde el Inspector
     public Transform puntoDisparo;  // Punto desde donde sale el hielo
 
+    void Start()
+    {
+        float mitadAltura = Camera.main.orthographicSize;
+        float mitadAncho = mitadAltura * Camera.main.aspect;
+
+        limiteIzquierdo = -mitadAncho + 0.5f; // 0.5f de margen, ajustable
+        limiteDerecho = mitadAncho - 0.5f;
+    }
     void Update()
     {
         // Obtener la entrada del teclado (flecha izquierda / derecha o A / D)
