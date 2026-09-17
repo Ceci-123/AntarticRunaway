@@ -19,4 +19,13 @@ public class HieloBehaviour : MonoBehaviour
         transform.position += Vector3.up * velocidad * Time.deltaTime;
 
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemigo"))
+        {
+            Destroy(other.gameObject); // destruye al enemigo
+            Destroy(gameObject);       // destruye el hielito
+        }
+    }
 }

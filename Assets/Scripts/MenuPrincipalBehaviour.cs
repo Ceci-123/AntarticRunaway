@@ -29,8 +29,16 @@ public class MenuPrincipalManager : MonoBehaviour
     /// <returns>No devuelve ningún valor (void).</returns>
     public void MostrarCreditos()
     {
-        if (panelPortada != null) panelPortada.SetActive(false);
+        Debug.Log("Botón créditos presionado");
+        Debug.Log("panelPortada es: " + panelPortada);
+        if (panelPortada != null)
+        {
+            panelPortada.SetActive(false);
+            Debug.Log("panelPortada.activeSelf ahora es: " + panelPortada.activeSelf);
+        }
         if (panelCreditos != null) panelCreditos.SetActive(true);
+        //if (panelPortada != null) panelPortada.SetActive(false);
+        //if (panelCreditos != null) panelCreditos.SetActive(true);
     }
 
     /// <summary>
