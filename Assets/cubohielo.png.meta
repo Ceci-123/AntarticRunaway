@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1b6ebc69372b8624dbfc2454859bfd00
+guid: 12988c2f0b849a648b49efd025f3c9c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7445638389762225189
-    second: hielito_0
+      213: 1620334011852586679
+    second: cubohielo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hielito_0
+      name: cubohielo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 50
-        height: 40
+        x: 25
+        y: 30
+        width: 1107
+        height: 848
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 524f9c3baa8345760800000000000000
-      internalID: 7445638389762225189
+      spriteID: 7bef4f9e2359c7610800000000000000
+      internalID: 1620334011852586679
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hielito_0: 7445638389762225189
+      cubohielo_0: 1620334011852586679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
