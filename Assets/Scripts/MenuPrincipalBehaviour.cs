@@ -1,10 +1,13 @@
-// ============================================================================
-// Proyecto: Antartic Runaway
-// Autor: Maria Cecilia Calanna (Ceci)
-// Fecha de Creación: 15/09/2026
-// Versión: 1.0.0
-// Descripción: Juego shooter 
-// ============================================================================
+/**
+ * @Project Antartic Runaway
+ * @fileoverview Comportamiento del menu principal
+ * @author Ceci <ceciliacalanna@gmail.com>
+ * @created 2026-09-30 14:35
+ * @lastModified 2026-09-30 14:35
+ * @lastModifiedBy Ceci
+ * 
+ * Copyright (c) 2026 - Todos los derechos reservados.
+ */
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,8 +20,7 @@ public class MenuPrincipalManager : MonoBehaviour
 
     void Start()
     {
-        // Al iniciar el juego, mostrar la portada y ocultar créditos
-        MostrarPortada();
+       MostrarPortada();
     }
 
     

@@ -1,3 +1,13 @@
+/**
+ * * @Project Antartic Runaway
+ * @fileoverview Clase de comportamiento de enemigos.
+ * @author Ceci <ceciliacalanna@gmail.com>
+ * @created 2026-09-30 14:35
+ * @lastModified 2026-09-30 14:35
+ * @lastModifiedBy Ceci
+ * 
+ * Copyright (c) 2026 - Todos los derechos reservados.
+ */
 using UnityEngine;
 using static UnityEditor.ShaderData;
 
@@ -8,15 +18,12 @@ public class EnemigoBehaviour : MonoBehaviour
     public float distanciaMovimiento = 2f;
 
     private Vector3 posicionInicial;
-    private float desfaseTiempo; // Offset aleatorio para desincronizar
+    private float desfaseTiempo; 
 
     void Start()
     {
-        // Guardamos la posición inicial donde apareció la ballena
         posicionInicial = transform.position;
-        // Generamos un número aleatorio entre 0 y 10 para cada ballena
         desfaseTiempo = Random.Range(0f, 10f);
-        // Variar un poco la velocidad para que una vaya más rápido que otra
         velocidad += Random.Range(-0.5f, 0.5f);
     }
 
@@ -27,14 +34,5 @@ public class EnemigoBehaviour : MonoBehaviour
     }
 }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
     
-        // Verificar si lo que tocó al enemigo tiene el script HieloBehaviour o el tag Hielo
-       // if (collision.GetComponent<HieloBehaviour>() != null || collision.CompareTag("Hielito"))
-        //{
-            // Destruir el hielo que impactó
-          //  Destroy(collision.gameObject);
-
-            // Destruir al enemigo
-            //Destroy(gameObject);
         

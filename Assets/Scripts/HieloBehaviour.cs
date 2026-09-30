@@ -1,31 +1,44 @@
+/**
+ * * @Project Antartic Runaway
+ * @fileoverview Clase de comportamiento del proyectil.
+ * @author Ceci <ceciliacalanna@gmail.com>
+ * @created 2026-09-30 14:35
+ * @lastModified 2026-09-30 14:35
+ * @lastModifiedBy Ceci
+ * 
+ * Copyright (c) 2026 - Todos los derechos reservados.
+ */
 using UnityEngine;
 
 public class HieloBehaviour : MonoBehaviour
 {
     [Header("Configuración del Proyectil")]
-    public float velocidad = 3f; // Velocidad con la que sube el hielo
-    public float tiempoVida = 3f;   // Segundos antes de destruirse si no choca
+    public float velocidad = 3f; 
+    public float tiempoVida = 3f;  
 
     
     void Start()
     {
-        // Autodestruir el hielo después de n segundos para no saturar la memoria
         Destroy(gameObject, tiempoVida);
     }
 
     void Update()
     {
-        // Mueve el hielo hacia arriba en coordenadas de mundo
-        transform.position += Vector3.up * velocidad * Time.deltaTime;
+       transform.position += Vector3.up * velocidad * Time.deltaTime;
 
     }
 
+    /// <summary>
+    /// Cuando detecta la colision destruye el enemigo y destruye el proyectil.
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemigo"))
         {
-            Destroy(other.gameObject); // destruye al enemigo
-            Destroy(gameObject);       // destruye el hielito
+            Destroy(other.gameObject); 
+            Destroy(gameObject);       
         }
     }
 }
