@@ -37,6 +37,10 @@ public class HieloBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Enemigo"))
         {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.OnEnemyKilled();
+            }
             Destroy(other.gameObject); 
             Destroy(gameObject);       
         }
