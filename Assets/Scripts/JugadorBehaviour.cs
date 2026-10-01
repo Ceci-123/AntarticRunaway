@@ -33,7 +33,8 @@ public class MovimientoJugador : MonoBehaviour
     }
     void Update()
     {
-       float entradaHorizontal = Input.GetAxisRaw("Horizontal");
+        Debug.Log("Posición del jugador: " + transform.position);
+        float entradaHorizontal = Input.GetAxisRaw("Horizontal");
        Vector3 nuevaPosicion = transform.position + new Vector3(entradaHorizontal * velocidad * Time.deltaTime, 0, 0);
        nuevaPosicion.x = Mathf.Clamp(nuevaPosicion.x, limiteIzquierdo, limiteDerecho);
        transform.position = nuevaPosicion;

@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public void OnEnemyKilled()
     {
         totalEnemies--;
+        Debug.Log("enemigos" + totalEnemies);
 
         if (totalEnemies <= 0)
         {
