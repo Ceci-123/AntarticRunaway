@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4237145387996324234}
   - component: {fileID: 4426573710856716886}
   - component: {fileID: 1712995695090795265}
+  - component: {fileID: -2437229833500471569}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemigo
@@ -181,3 +182,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-2437229833500471569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365816086385607173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0417714551aefde40b935ee017757395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisparoBallena
+  prefabBurbuja: {fileID: 2979469240606129308, guid: eb2e6897f6c766f4aa9cabc44f977554, type: 3}
+  puntoDisparo: {fileID: 0}
+  intervaloMinimo: 2
+  intervaloMaximo: 5
