@@ -27,6 +27,10 @@ public class BurbujaBehaviour : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.name == "Jugador")
+        {
+            Debug.Log("Tag: " + other.tag + " | ¿Tiene VidasJugador?: " + (other.GetComponent<VidasJugador>() != null));
+        }
         Debug.Log("Burbuja tocó a: " + other.name);
         if (other.CompareTag("Jugador"))
         {

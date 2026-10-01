@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidasJugador
   vidasMaximas: 3
-  vidasActuales: 0
+  vidasActuales: 3
   tiempoInvulnerable: 1.5
   velocidadParpadeo: 0.1
 --- !u!1 &673141446
@@ -958,9 +958,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CorazonesUI
   jugador: {fileID: 474362615}
   corazones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 791633637}
+  - {fileID: 1995519081}
+  - {fileID: 1153600467}
   corazonLleno: {fileID: 0}
   corazonVacio: {fileID: 0}
 --- !u!1 &1153600465
