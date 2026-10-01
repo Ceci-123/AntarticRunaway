@@ -25,4 +25,17 @@ public class BurbujaBehaviour : MonoBehaviour
     {
         transform.position += Vector3.down * velocidad * Time.deltaTime;
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Burbuja tocó a: " + other.name);
+        if (other.CompareTag("Jugador"))
+        {
+            VidasJugador vidas = other.GetComponent<VidasJugador>();
+            if (vidas != null)
+            {
+                vidas.RecibirDanio();
+            }
+            Destroy(gameObject);
+        }
+    }
 }
