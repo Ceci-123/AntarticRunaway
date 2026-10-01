@@ -3,7 +3,7 @@
  * @fileoverview Clase de vidas del jugador.
  * @author Ceci <ceciliacalanna@gmail.com>
  * @created 2026-09-30 15:04
- * @lastModified 2026-09-30 15:04
+ * @lastModified 2026-09-30 16:14
  * @lastModifiedBy Ceci
  * 
  * Copyright (c) 2026 - Todos los derechos reservados.
@@ -54,7 +54,12 @@ public class VidasJugador : MonoBehaviour
     void Morir()
     {
         Debug.Log("El jugador murió");
-        // En el paso 5 avisaremos al GameManager para mostrar la derrota
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.Derrota();
+        }
+
         gameObject.SetActive(false);
     }
 

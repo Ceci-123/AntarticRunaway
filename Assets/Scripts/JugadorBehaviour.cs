@@ -33,7 +33,7 @@ public class MovimientoJugador : MonoBehaviour
     }
     void Update()
     {
-        //Debug.Log("Posición del jugador: " + transform.position);
+        
         float entradaHorizontal = Input.GetAxisRaw("Horizontal");
        Vector3 nuevaPosicion = transform.position + new Vector3(entradaHorizontal * velocidad * Time.deltaTime, 0, 0);
        nuevaPosicion.x = Mathf.Clamp(nuevaPosicion.x, limiteIzquierdo, limiteDerecho);
@@ -42,6 +42,7 @@ public class MovimientoJugador : MonoBehaviour
         {
             DispararHielo();
         }
+        if (Time.timeScale == 0f) return;
     }
 
     /// <summary>
