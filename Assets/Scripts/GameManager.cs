@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             gameOverPanel.SetActive(true);
         }
 
-        // Opcional: Pausar el juego al morir todos
-        // Time.timeScale = 0f;
+        //  Pausar el juego al morir todos
+        Time.timeScale = 0f;
     }
 }

@@ -179,5 +179,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5146989e09701324494d930f04c21d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HieloBehaviour
-  velocidad: 1
+  velocidad: 4
   tiempoVida: 10
