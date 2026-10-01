@@ -36,18 +36,23 @@ public class GeneradorEnemigos : MonoBehaviour
     /// <returns>No devuelve ningún valor (void).</returns>
     void GenerarEnemigos()
     {
-        if (prefabBallena == null)
-        {
-            Debug.LogError("OMG OMG OMG ¡No asignaste el Prefab de la ballena en el inspector!");
-            return;
-        }
-
         for (int i = 0; i < cantidadEnemigos; i++)
         {
             float posXAleatoria = Random.Range(xMinima, xMaxima);
             float posYAleatoria = Random.Range(yMinima, yMaxima);
             Vector3 posicionAleatoria = new Vector3(posXAleatoria, posYAleatoria, 0f);
             Instantiate(prefabBallena, posicionAleatoria, Quaternion.identity);
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.RegistrarEnemigo();
+            }
+        }
+
+        // Después del for: ya se generaron todos
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.FinalizarGeneracion();
         }
     }
 }

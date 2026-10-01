@@ -40,7 +40,7 @@ public class HieloBehaviour : MonoBehaviour
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.OnEnemyKilled();
-                Debug.Log("llamo al script de game manager");
+                
             }
             Destroy(other.gameObject); 
             Destroy(gameObject);       

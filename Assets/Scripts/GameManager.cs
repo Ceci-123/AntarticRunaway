@@ -3,7 +3,7 @@
  * @fileoverview Clase game manager.
  * @author Ceci <ceciliacalanna@gmail.com>
  * @created 2026-09-30 15:39
- * @lastModified 2026-09-30 15:39
+ * @lastModified 2026-10-01 11:04
  * @lastModifiedBy Ceci
  * 
  * Copyright (c) 2026 - Todos los derechos reservados.
@@ -17,11 +17,12 @@ public class GameManager : MonoBehaviour
     [Header("UI Reference")]
     [SerializeField] private GameObject gameOverPanel;
 
-    private int totalEnemies;
+    //private int totalEnemies;
+    private int enemigosVivos = 0;
+    private bool generacionTerminada = false;
 
     private void Awake()
     {
-        // Patron Singleton simple para acceder facil desde los enemigos
         if (Instance == null)
         {
             Instance = this;
@@ -34,22 +35,33 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Ocultamos el cartel por seguridad al iniciar
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(false);
         }
+    }
 
-        // Busca todos los enemigos en la escena con el Tag "Enemy"
-        totalEnemies = GameObject.FindGameObjectsWithTag("Enemigo").Length;
+
+    public void RegistrarEnemigo()
+    {
+        enemigosVivos++;
+    }
+
+    public void FinalizarGeneracion()
+    {
+        generacionTerminada = true;
+        ComprobarFin();
     }
 
     public void OnEnemyKilled()
     {
-        totalEnemies--;
-        Debug.Log("enemigos" + totalEnemies);
-
-        if (totalEnemies <= 0)
+        enemigosVivos--;
+        Debug.Log("Enemigos vivos: " + enemigosVivos);
+        ComprobarFin();
+    }
+    private void ComprobarFin()
+    {
+        if (generacionTerminada && enemigosVivos <= 0)
         {
             ShowGameOver();
         }
@@ -62,7 +74,7 @@ public class GameManager : MonoBehaviour
             gameOverPanel.SetActive(true);
         }
 
-        //  Pausar el juego al morir todos
+       
         Time.timeScale = 0f;
     }
 }
