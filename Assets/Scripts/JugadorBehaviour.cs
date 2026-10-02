@@ -33,7 +33,7 @@ public class MovimientoJugador : MonoBehaviour
     }
     void Update()
     {
-        
+        if (Time.timeScale == 0f) return;
         float entradaHorizontal = Input.GetAxisRaw("Horizontal");
        Vector3 nuevaPosicion = transform.position + new Vector3(entradaHorizontal * velocidad * Time.deltaTime, 0, 0);
        nuevaPosicion.x = Mathf.Clamp(nuevaPosicion.x, limiteIzquierdo, limiteDerecho);
