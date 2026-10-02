@@ -1,4 +1,7 @@
-<img width="490" height="509" alt="pinguinoAK47" src="https://github.com/user-attachments/assets/b5498a16-6937-478d-af21-0de1a9b18190" />
+<img width="390" height="409" alt="pinguinoAK47" src="https://github.com/user-attachments/assets/b5498a16-6937-478d-af21-0de1a9b18190" />
+
+
+
 # Antartic Runaway
 
 Juego 2 D realizado en Unity
