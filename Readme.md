@@ -1,3 +1,4 @@
+<img width="490" height="509" alt="pinguinoAK47" src="https://github.com/user-attachments/assets/b5498a16-6937-478d-af21-0de1a9b18190" />
 # Antartic Runaway
 
 Juego 2 D realizado en Unity
@@ -6,4 +7,3 @@ Juego 2 D realizado en Unity
 
 Protagonista: Freezy el pinguino
 
-![Captura del juego](imagenes/pinguinoAK47.png)
