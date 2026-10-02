@@ -9,7 +9,6 @@
  * Copyright (c) 2026 - Todos los derechos reservados.
  */
 using UnityEngine;
-using static UnityEditor.ShaderData;
 
 public class EnemigoBehaviour : MonoBehaviour
 {
