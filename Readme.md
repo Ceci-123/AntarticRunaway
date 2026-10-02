@@ -1,8 +1,8 @@
 # Antartic Runaway
 
-Juego 2 D realizado en Unity 
+Juego 2 D realizado en Unity
 
-## Programacion 1 
+## Programacion 1
 
 Protagonista: Freezy el pinguino
 
