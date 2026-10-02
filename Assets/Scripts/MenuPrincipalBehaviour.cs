@@ -31,7 +31,7 @@ public class MenuPrincipalManager : MonoBehaviour
     /// <returns>No devuelve ningún valor (void).</returns>
     public void MostrarCreditos()
     {
-        Debug.Log("Botón créditos presionado");
+        
         if (panelPortada != null) panelPortada.SetActive(false);
         if (panelCreditos != null) panelCreditos.SetActive(true);
     }
@@ -48,13 +48,13 @@ public class MenuPrincipalManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Registra un mensaje de debug en la consola y cambia a la escena llamada "Juego".
+    /// cambia a la escena llamada "Juego".
     /// </summary>
     /// <param>No recibe parámetros.</param>
     /// <returns>No devuelve ningún valor (void).</returns>
     public void Jugar()
     {
-        Debug.Log("Cargando el juego...");
+        
         SceneManager.LoadScene("Juego");
 
     }

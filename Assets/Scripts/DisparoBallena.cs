@@ -1,6 +1,6 @@
 /**
  * * @Project Antartic Runaway
- * @fileoverview Clase disparo ballena.
+ * @fileoverview Clase para gestionar el disparo de la ballena.
  * @author Ceci <ceciliacalanna@gmail.com>
  * @created 2026-10-01 12:01
  * @lastModified 2026-10-01 12:01
@@ -38,6 +38,11 @@ public class DisparoBallena : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instancia un proyectil 
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
     void Disparar()
     {
         if (prefabBurbuja == null) return;
@@ -45,6 +50,12 @@ public class DisparoBallena : MonoBehaviour
         Vector3 posicionSalida = (puntoDisparo != null) ? puntoDisparo.position : transform.position;
         Instantiate(prefabBurbuja, posicionSalida, Quaternion.identity);
     }
+
+    /// <summary>
+    /// Calcula un tiempo de espera aleatorio para el próximo disparo
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
 
     void ReiniciarTemporizador()
     {

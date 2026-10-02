@@ -1,6 +1,6 @@
 /**
  * * @Project Antartic Runaway
- * @fileoverview Clase de generacion de enemigos.
+ * @fileoverview Clase para gestionar la generacion de enemigos.
  * @author Ceci <ceciliacalanna@gmail.com>
  * @created 2026-09-30 14:35
  * @lastModified 2026-09-30 14:35
@@ -49,7 +49,7 @@ public class GeneradorEnemigos : MonoBehaviour
             }
         }
 
-        // Después del for: ya se generaron todos
+        
         if (GameManager.Instance != null)
         {
             GameManager.Instance.FinalizarGeneracion();

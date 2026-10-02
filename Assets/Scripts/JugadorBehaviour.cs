@@ -1,6 +1,6 @@
 /**
  * * @Project Antartic Runaway
- * @fileoverview Clase de comportaiento del jugador.
+ * @fileoverview Clase de comportamiento del jugador.
  * @author Ceci <ceciliacalanna@gmail.com>
  * @created 2026-09-30 14:35
  * @lastModified 2026-09-30 14:35

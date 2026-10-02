@@ -1,6 +1,6 @@
 /**
  * * @Project Antartic Runaway
- * @fileoverview Clase de comportamiento del proyectil.
+ * @fileoverview Clase de comportamiento del proyectil hielito.
  * @author Ceci <ceciliacalanna@gmail.com>
  * @created 2026-09-30 14:35
  * @lastModified 2026-09-30 14:35

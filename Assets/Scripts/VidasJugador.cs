@@ -22,24 +22,35 @@ public class VidasJugador : MonoBehaviour
     public float tiempoInvulnerable = 1.5f;
     public float velocidadParpadeo = 0.1f;
 
-    // Lo usaremos en el paso 4 para actualizar los corazones
+
     public event Action<int> VidasCambiaron;
 
     private bool invulnerable = false;
     private SpriteRenderer sprite;
 
+    /// <summary>
+    /// Inicializa el objeto al valor maximo de vidas y asigna a una variable la referencia del componente para utilizarla luego.
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
     void Awake()
     {
         vidasActuales = vidasMaximas;
         sprite = GetComponent<SpriteRenderer>();
     }
 
+    /// <summary>
+    /// Verifica si el personaje puede recibir daño, si es asi, resta una vida y dispara el evento de la UI.
+    /// Si se quedo sin vidas, muere y si no, llama al metodo de invunerabilidad
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
     public void RecibirDanio()
     {
         if (invulnerable || vidasActuales <= 0) return;
 
         vidasActuales--;
-        Debug.Log("Vidas: " + vidasActuales);
+     
         VidasCambiaron?.Invoke(vidasActuales);
 
         if (vidasActuales <= 0)
@@ -51,9 +62,15 @@ public class VidasJugador : MonoBehaviour
             StartCoroutine(Invulnerabilidad());
         }
     }
+
+    /// <summary>
+    /// Desactiva el personaje y notifica al game manager.
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
     void Morir()
     {
-        Debug.Log("El jugador murió");
+        
 
         if (GameManager.Instance != null)
         {
@@ -63,6 +80,11 @@ public class VidasJugador : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Le da al personaje un momento de invunerabilidad para que no reciba daño.
+    /// </summary>
+    /// <param>No recibe parámetros.</param>
+    /// <returns>No devuelve ningún valor (void).</returns>
     IEnumerator Invulnerabilidad()
     {
         invulnerable = true;
